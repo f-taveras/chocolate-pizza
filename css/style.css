@@ -39,22 +39,31 @@ main{
 
 .icon-container{
     display: flex;
+    justify-content: space-around;
+      align-items: center;
 }
 
 .icon-container img{
     height: 20px;
     width: 20px;
     margin-top: 20px;
-    
+    margin-left: 3px;
+      
 }
+.icon-container img:nth-last-child(2) {
+    margin-left: 10px; 
+  }
 
 
 .devider{
     margin-top: 20px;
     height: 2px;
     width: 100%;
-    background-color: grey;
-    border: grey solid;
+    position: relative;
+    font-size: 15px;
+    white-space: nowrap;
+
+    
 }
 
 .middle-container{
@@ -70,13 +79,14 @@ main{
 }
 .image-text {
     
-    background-color: rgba(0, 0, 0, 0.025); 
+    background-color: rgba(0, 0, 0, 0.0025); 
     color: black; 
     padding: 10px; 
     align-items: center;
 }
 
 .printing-logo {
+    background-color: rgba(0, 0, 0, 0.0025); 
     display: flex;
     flex-direction: row;
     height: 15px;
@@ -142,10 +152,17 @@ main{
     content: "☑"; 
     content: '\2713';
     color: green;
+  
   }
 
   .list-left{
 margin-left: 20px;
+}
+.list-left input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+}
+.list-right input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
 }
   .bottom-container{
     display: flex;
